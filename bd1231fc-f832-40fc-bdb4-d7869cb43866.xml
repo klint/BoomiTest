@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>bd1231fc-f832-40fc-bdb4-d7869cb43866</Id>
+  <Type>process</Type>
+  <Name>Flux1</Name>
+  <Version>10</Version>
+  <FolderId name="Training-cyrille-feuillat/CICD">
+  3951669</FolderId>
+  <AccountId>trainingcyrillefeuillat-0JZZLM</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>true</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>NOACTION</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="77c684e9-23dd-452f-ab1c-8d91d825e54e"
+    refId="shape2.connection" name="Atom" />
+    <Ref compId="be417c75-1a7c-4376-9a1c-b629fbe3cac2"
+    refId="shape2.operation" name="Local Atome Create File" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="true" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="Start" image="start"
+        x="96.0" y="96.0" shapetype="start">
+          <configuration>
+            <noaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape4"
+            x="176.0" y="249.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="31" orient="horizontal" x="130.0"
+              y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="144" orient="vertical" x="161.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="15" orient="horizontal" x="161.0"
+              y="255.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape2" userlabel="Local Atom Create File"
+        image="connectoraction_icon" x="336.0" y="96.0"
+        shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="be417c75-1a7c-4376-9a1c-b629fbe3cac2"
+            connectionId="77c684e9-23dd-452f-ab1c-8d91d825e54e"
+            actionType="CREATE" connectorType="disk-sdk"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters />
+              <dynamicProperties />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="unset"
+            x="470.0" y="107.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="370.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="370.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="58" orient="horizontal" x="370.0"
+              y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="2" orient="vertical" x="428.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="42" orient="horizontal" x="428.0"
+              y="113.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel="Project Flow cadref1.1"
+        image="documentproperties_icon" x="192.0" y="240.0"
+        shapetype="documentproperties">
+          <configuration>
+            <documentproperties>
+              <documentproperty persist="false"
+              name="Disk v2 - File Name"
+              propertyId="connector.disk-sdk.fileName"
+              defaultValue="" isTradingPartner="false"
+              isDynamicCredential="false" shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue valueType="process" key="4">
+                    <processparameter processproperty="Environment_Name"
+                    processpropertydefaultvalue="NULL" />
+                  </parametervalue>
+                  <parametervalue valueType="static" key="1">
+                    <staticparameter staticproperty="_CadRef1.2_" />
+                  </parametervalue>
+                  <parametervalue valueType="keygen" key="2">
+                    <keygenparameter keyname="Seq"
+                    keyfixtolength="2" />
+                  </parametervalue>
+                  <parametervalue valueType="static" key="3">
+                    <staticparameter staticproperty="_.txt" />
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape4.dragpoint1" toShape="shape2"
+            x="320.0" y="105.0">
+              <linesegment name="shape4.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="226.0" y="255.0" />
+              <linesegment name="shape4.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="226.0" y="255.0" />
+              <linesegment name="shape4.dragpoint1.lineseg3"
+              length="55" orient="horizontal" x="226.0"
+              y="255.0" />
+              <linesegment name="shape4.dragpoint1.lineseg4"
+              length="144" orient="vertical" x="281.0" y="111.0" />
+              <linesegment name="shape4.dragpoint1.lineseg5"
+              length="39" orient="horizontal" x="281.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+  <Overrides>
+    <Connections>
+      <ConnectionOverride id="77c684e9-23dd-452f-ab1c-8d91d825e54e">
+
+        <field id="directory" label="Directory"
+        overrideable="false" />
+        <field id="pollingInterval" label="Polling Interval"
+        overrideable="false" />
+      </ConnectionOverride>
+    </Connections>
+    <PartnerOverrides />
+    <Properties>
+      <PropertyOverride name="Environment_Name" />
+    </Properties>
+    <Extensions>
+      <ObjectDefinitions>
+        <unusedProfiles />
+      </ObjectDefinitions>
+      <DataMaps>
+        <unusedMaps />
+      </DataMaps>
+    </Extensions>
+    <CrossReferenceOverrides />
+    <PGPOverrides />
+    <DefinedProcessPropertyOverrides />
+  </Overrides>
+</Component>
