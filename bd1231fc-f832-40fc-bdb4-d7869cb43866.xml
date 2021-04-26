@@ -9,6 +9,7 @@ deleted="false">
   <Type>process</Type>
   <Name>Flux1.2</Name>
   <Version>10</Version>
+  <!-- TODO Use SonarQube instead of SonarCloud, add custom XML rules for Boomi XML Component Metadata and test again -->
   <FolderId name="Training-cyrille-feuillat/CICD">
   3951669</FolderId>
   <AccountId>trainingcyrillefeuillat-0JZZLM</AccountId>
